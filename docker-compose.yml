@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+      
+services:
+  imagem_clientes_microservice:
+    container_name: imagem_clientes_microservice
+    image: imagem_clientes_microservice
+    ports:
+      - "5050:5000"
+    build:
+      context: ./
